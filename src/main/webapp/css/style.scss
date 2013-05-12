@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+$background: white;
+$text: blue;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $background;
+  color: $text;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &>li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+$nav-bar-height: 1em;
+
+.nav-bar {
+  height: $nav-bar-height;
+
+  .btn-next {
+    float: right;
+  }
+}
+
+.content {
+  height: 100%;
+  padding-bottom: $nav-bar-height;
+}
+
+ul.fs-pages-container {
+  height: 100%;
+  width: 100%;
+
+  li.fs-page {
+    height: 100%;
+    width: 100%;
+    float: left;
+    border: 1px solid red;
+  }
+
+  -webkit-transition: -webkit-transform 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
+
+li.page-gender {
+  $init-zoom: 0.7;
+  $select-zoom: 1;
+
+  .female, .male {
+    width: 50%;
+    height: 100%;
+    float: left;
+    opacity: 0.2;
+    zoom: $init-zoom;
+
+    -webkit-transition: opacity 0.9s, zoom 0.9s;
+    -webkit-transition-timing-function: ease;
+
+    &.selected {
+      opacity: 1;
+    }
+  }
+
+  .female {
+    background: url('../img/female.png') no-repeat 50% 50%;
+    //female image happens to be larger, adjusting it
+    zoom: 0.85 * $init-zoom;
+
+
+    &.selected {
+      zoom: 0.85 * $select-zoom;
+    }
+  }
+
+  .male {
+    background: url('../img/male.png') no-repeat 50% 50%;
+
+    &.selected {
+      zoom: $select-zoom;
+    }
+  }
+}

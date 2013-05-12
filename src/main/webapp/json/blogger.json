@@ -1,0 +1,42 @@
+[
+    {
+        "rank": 1,
+        "id": 1,
+        "blog": "karinala",
+        "imageUrl": "img/karinala.jpg",
+        "name": "Design by Chona Pike",
+        "snippet": "ICU Fashion Show - San Francisco HAS FASHION 2013- http://www.karinala.com/apps/blog"
+    },
+    {
+        "rank": 2,
+        "id": 2,
+        "blog": "karinala",
+        "imageUrl": "img/karinala1.jpg",
+        "name": "Brandon Yang",
+        "snippet": "Designer Brandon Yang, the world's first designer powered by Android 3.0 (Honeycomb)."
+    },
+    {
+        "rank": 1,
+        "id": "3",
+        "blog": "thesfstyle",
+        "imageUrl": "img/sfstyle.jpg",
+        "name": "Man Morsel Monday",
+        "snippet": "Good Fit & Classic Pieces - Man Morsel Monday - New York City, Manhattan "
+    },
+    {
+        "rank": 2,
+        "id": "4",
+        "blog": "thesfstyle",
+        "imageUrl": "img/sfstyle1.jpg",
+        "name": "Duck Umbrella  Leather Tote - New York City, Manhattan ",
+        "snippet": "Introducing Duck Umbrella + Leather Tote - New York City, Manhattan  classy enough to carry around, big enough to gather around."
+    },
+    {
+        "rank": 1,
+        "id": "5",
+        "blog": "calvintage",
+        "imageUrl": "img/calvintage.jpg",
+        "name": "Hansel from basel spring 2013",
+        "snippet": "its funny how easy it is for me to overlook such a simple detail like a pair of good socks,browsing through the new hansel from basel collection is just the reminder i need to start adding some unexpected colors and patterns into my wardrobe. this la-based brand is pretty much at the top of my list when it comes to cool socks and stockings. i actually purchased a few pairs with rachel comey last season and have been greedily hoarding them, still packaging just waiting for the perfect time to wear them. they’re just so special that i almost want to just leave them untouched on top of my dresser so i can simply admire them. but really, i need to bite the bullet and throw them on with skinny jeans on lazy days, or with a sandals on a springy afternoon."
+    }
+]

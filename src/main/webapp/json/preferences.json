@@ -1,0 +1,91 @@
+{
+    "userid": "100000591379521",
+    "size": [
+        {
+            "id": "1",
+            "shirt": "s",
+            "imageUrl": "img/print.jpg"
+        },
+        {
+            "pant": "m"
+        },
+        {
+            "shoes": "36"
+        }
+    ],
+    "colors": [
+        {
+            "id": "2",
+            "color": "skyblue",
+            "imageUrl": "flowery.jpg",
+            "selected" : "N"
+        },
+        {
+            "id": "3",
+            "color": "purple",
+            "imageUrl": "floral.jpg",
+            "selected" : "N"
+        }
+    ],
+    "prints": [
+        {
+            "print": "zebra",
+            "imageUrl":"floral.jpg"
+        },
+        {
+            "print": "flowery",
+            "imageUrl":"flowery.jpg"
+        }
+    ],
+    "luxurybrands": [
+        {
+            "luxbrand": "Armani",
+            "imageUrl":"flowery.jpg"
+        },
+        {
+            "luxbrand": "Gucci",
+            "imageUrl":"floral.jpg"
+        }
+    ],
+    "Hi_Street_Brands": [
+        {
+            "HiBrand": "Brand 1",
+             "imageUrl":"flowery.jpg"
+        },
+        {
+            "HiBrand": "Brand2",
+            "imageUrl":"floral.jpg"
+        }
+    ],
+    "Fast_Fashion_Brands": [
+        {
+            "FastFash": "Express",
+            "imageUrl":"floral.jpg"
+        },
+        {
+            "FastFash": "GAP",
+            "imageUrl":"flowery.jpg"
+        }
+    ],
+    "IndieDesigners": [
+        {
+            "indie": "Sonas Jeans",
+            "imageUrl":"flowery.jpg"
+        },
+        {
+            "indie": "Rachel Zoe",
+            "imageUrl":"floral.jpg"
+        }
+    ],
+    "Blogger Pref": [
+        {
+            "url": "www.calvintage.com"
+        },
+        {
+            "url": "www.sfstyle.com"
+        },
+        {
+            "url": "www.karinala.com"
+        }
+    ]
+}

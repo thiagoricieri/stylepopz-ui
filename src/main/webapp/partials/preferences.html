@@ -1,0 +1,84 @@
+  <div class='nav-bar'>
+    <span class='btn-back icon-chevron-left' ng-click='Navigation.back()'>Back</span>
+    <span class='btn-next' ng-click='Navigation.next()'>Next<i class='icon-chevron-right'></i></span>
+  </div>
+
+  <div class='content' id='content'>
+    <ul fs-pages>
+
+      <li fs-page class='page-gender'>
+        <div class='female' ng-click='selectFemale()'ng-class='{selected:isFemale()}'></div>
+        <div class='male' ng-click='selectMale()' ng-class='{selected:isMale()}'></div>
+      </li>
+      
+      <li fs-page class='page-colors'>
+          Select the colors from these {{preferences.colors.length}} colors
+          <ul>
+          	<li ng-repeat="color in preferences.colors">
+               <a  ng-click='selectColor(color.color)'>  <img ng-src="img/{{color.imageUrl}}" /></a>
+         	</li>
+         </ul>
+      </li>
+      
+      
+       <li fs-page class='page-prints'>
+          Select the Prints from these {{preferences.prints.length}} prints
+          <ul>
+          	<li ng-repeat="print in preferences.prints">
+               <input type="text" ng-model="print.print" selected='true'/>
+                <a  ng-click='selectPrints(print.print)'>  <img ng-src="img/{{print.imageUrl}}" /></a>
+         	</li>
+         </ul>
+      </li>
+      
+      
+      <li fs-page class='page-luxurybrands'>
+          Select the Luxurybrands from these {{preferences.luxurybrands.length}} luxurybrands
+          <ul>
+          	<li ng-repeat="luxurybrand in preferences.luxurybrands">
+               <input type="text" ng-model="luxurybrand.luxbrand"/>
+              <a  ng-click='selectluxurybrands(luxurybrand.luxbrand)'>  <img ng-src="img/{{luxurybrand.imageUrl}}" /></a>
+         	</li>
+         </ul>
+      </li>
+      
+      <li fs-page class='page-Hi_Street_Brands'>
+          Hi_Street_Brand I have {{preferences.Hi_Street_Brands.length}} Hi_Street_Brand
+          <ul>
+          	<li ng-repeat="Hi_Street_Brand in preferences.Hi_Street_Brands">
+               <input type="text" ng-model="Hi_Street_Brand.HiBrand"/>
+                <a  ng-click='selectHiStreetBrand(Hi_Street_Brand.HiBrand)'> <img ng-src="img/{{Hi_Street_Brand.imageUrl}}" /></a>
+         	</li>
+         </ul>
+      </li>
+      
+      <li fs-page class='page-Fast_Fashion_Brands'>
+          Fast_Fashion_Brands I have {{preferences.Fast_Fashion_Brands.length}} Fast_Fashion_Brands
+          <ul>
+          	<li ng-repeat="Fast_Fashion_Brand in preferences.Fast_Fashion_Brands">
+               <input type="text" ng-model="Fast_Fashion_Brand.FastFash"/>
+                <a  ng-click='selectFastFashionBrand(Fast_Fashion_Brand.FastFash)'> <img ng-src="img/{{Fast_Fashion_Brand.imageUrl}}" /></a>
+         	</li>
+         </ul>
+      </li>
+ 
+      <li fs-page class='page-IndieDesigners'>
+          Fast_Fashion_Brands I have {{preferences.IndieDesigners.length}} Fast_Fashion_Brands
+          <ul>
+          	<li ng-repeat="IndieDesigner in preferences.IndieDesigners">
+          	 <div>
+               <input type="text" ng-model="IndieDesigner.indie"/>
+                <a  ng-click='selectIndieDesigner(IndieDesigner.indie)'><img ng-src="img/{{IndieDesigner.imageUrl}}" /></a>
+              </div>
+         	</li>
+         </ul>
+      </li>
+      
+
+      <li fs-page>
+        <input type="submit" ng-click="saveProfile()" value="Save">
+      Submit 
+      </li>
+
+    </ul>
+  </div>

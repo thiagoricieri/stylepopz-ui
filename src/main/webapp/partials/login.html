@@ -1,0 +1,38 @@
+	<div>
+		<section class="loginform cf" >
+			<form name="login" accept-charset="utf-8">
+				<ul>
+					<li>
+						<label for="userName">UserName/Email:</label>
+						<input type="text" name="userName" ng-model="loginname" required> 
+					</li>
+					<li>
+						<label for="password">Password</label>
+						<input type="password" name="lastName" ng-model="password">
+					<li>
+						<input type="submit" ng-click="saveuser()" value="Login">
+					</li>
+				</ul>
+			</form>
+		</section>
+	</div>
+	
+	<div>
+		<section class="loginform cf" >
+			<form name="login"  accept-charset="utf-8">
+					<ul ng-init="services = [{name:'facebook'},{name:'gmail'},{name:'github'},{name:'fitbit'},{name:'flickr'},{name:'instagram'}]">
+    						
+    						<li ng-repeat="model in services">
+        				       <a ng:click="save()" > <img ng-src="img/{{model.name}}.png" /></a>&nbsp                      
+    					    </li>
+    					    <br/><br/><br/>
+					  <li>
+						<input type="submit" value="Signup">
+					</li>
+					</ul>
+			</form>
+		</section>
+	</div>
+	
+<h1> Hello: {{name}}</h1>
+<h1> Hello: {{password}}</h1>

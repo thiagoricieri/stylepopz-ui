@@ -1,0 +1,29 @@
+{
+    "rank": 1,
+    "id": 1,
+    "blog": "karinala",
+    "imageUrl": "img/karinala.jpg",
+    "name": "Karina Lamar",
+    "description": "ICU Fashion Show - San Francisco HAS FASHION 2013- http://www.karinala.com/apps/blog",
+    "Klout": "90",
+    "PeerIndex": "89",
+    "BloggerReviewRating": "****",
+    "collection": {
+               "name": "Design by Chona Pike",
+                "images": [
+                	"http://productshots2.modcloth.com/productshots/0127/4401/db99c6aa69bbb57a0575067c8fa91fd0.jpg",
+                	"img/yammer.png",
+                	"img/floral.jpg"
+                ],
+                "sizes": "s/m/t",
+                "availability": [
+                    "Store1 - location",
+                    "Store2 - location"
+                ],
+                "price": "$100",
+                "Review": "****",
+                "ReviewComments": ""
+
+   }
+    
+}

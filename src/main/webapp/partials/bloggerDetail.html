@@ -1,0 +1,13 @@
+<img ng-src="{{mainImageUrl}}" class="phone">
+<h4>{{user.name}}</h4>
+<p>{{user.description}}</p>
+
+      <li class='phone-thumbs'>
+          <ul>
+          	<li ng-repeat="img in user.collection.images">
+          	 <div>
+                <a  ng-click="setImage(img)"><img ng-src="{{img}}" ></a>
+              </div>
+         	</li>
+         </ul>
+      </li>
