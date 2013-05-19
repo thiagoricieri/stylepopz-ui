@@ -65,6 +65,43 @@ function ProfileCtrl($scope, $http, Navigation, Preferences) {
   };
   
   $scope.saveProfile = function(){
+	  var method = 'POST';
+	  var url = 'http://localhost:8080/stylepopz/api/user/setPreference';
+	  $scope.codeStatus = "";
+	  
+	  var object = {
+			  id: Preferences.getId(),
+			  Sex: $scope.profile.gender,
+			  color: $scope.prefer.colors,
+			  prints: $scope.prefer.prints,
+			  luxurybrands: $scope.prefer.luxurybrands,
+			  hiStreetBrand: $scope.prefer.hiStreetBrand,
+			  fastFashionBrand: $scope.prefer.fastFashionBrand,
+			  indieDesigner:  $scope.prefer.indieDesigner
+      };
+		
+	  
+	  var json = JSON.stringify(object);
+	  console.log(json);
+	  
+	  $http({
+	      method: method,
+	      url: url,
+	      params: {'preference':json},
+	      data: {'preference':json},
+	      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+	    }).
+	    success(function(response) {
+	    	console.log(response);
+//	        $scope.codeStatus = response.data;
+	    }).
+	    error(function(response) {
+	        $scope.codeStatus = response || "Request failed";
+	    });
+	   
+	  
+	  
+	  console.log("ID: "+Preferences.getId());
 	  console.log("Sex: "+$scope.profile.gender);
 	  console.log("Color "+ $scope.prefer.colors);
 	  console.log("Prints "+$scope.prefer.prints);
@@ -72,6 +109,8 @@ function ProfileCtrl($scope, $http, Navigation, Preferences) {
 	  console.log("Hi Street "+ $scope.prefer.hiStreetBrand);
 	  console.log("FastFashionBrand "+ $scope.prefer.fastFashionBrand);
 	  console.log("IndieDesigner "+ $scope.prefer.indieDesigner);
+	  
+	  
   }
 }
 
@@ -82,9 +121,11 @@ function preferencesCtrl($scope, $location, $http) {
 }
 
 function loadPreferences($scope, $http, $location,Preferences){
-     var _URL_ = 'json/preferences.json';    
-//     _URL_ = "http://localhost:8080/stylepopz/api/user/getPreference/";
-//  	 _URL_ = _URL_+Preferences.getId();
+	// var _URL_ = 'json/preferences.json';    
+    var _URL_ = "http://localhost:8080/stylepopz/api/user/getPreference/";
+     
+    //var _URL_ = "http://stylepops.herokuapp.com/api/user/getPreference/100000591379521";  
+  	_URL_ = _URL_+Preferences.getId();
      alert(_URL_);
 
      console.log("Hello from loadPreferences");
@@ -108,8 +149,8 @@ function loadPreferences($scope, $http, $location,Preferences){
 }
 
 function LoginCtrl($scope, $location, $http, $rootScope,Preferences) {
-	//var _URL_ = 'http://localhost:8080/stylepopz/api/auth/';
-	var _URL_ = 'http://stylepops.herokuapp.com/api/auth/';
+	var _URL_ = 'http://localhost:8080/stylepopz/api/auth/';
+	//var _URL_ = 'http://stylepops.herokuapp.com/api/auth/';
 	
 	$scope.saveuser = function() {
 		alert('username'+$scope.loginname);
@@ -121,7 +162,7 @@ function LoginCtrl($scope, $location, $http, $rootScope,Preferences) {
         alert(_URL_);
 		$http.get(_URL_).success(function(data) {
 			alert(data);
-			status = 200;
+			var status = 200;
 	    	if (status == 200) {
     			$scope.users = data;
     			alert('before redirect 200-'+data);

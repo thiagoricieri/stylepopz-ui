@@ -43,29 +43,29 @@
       </li>
       
       <li fs-page class='page-Hi_Street_Brands'>
-          Hi_Street_Brand I have {{preferences.Hi_Street_Brands.length}} Hi_Street_Brand
+          Hi_Street_Brand I have {{preferences.hi_Street_Brands.length}} hi_street_brand
           <ul>
-          	<li ng-repeat="Hi_Street_Brand in preferences.Hi_Street_Brands">
-               <input type="text" ng-model="Hi_Street_Brand.HiBrand"/>
-                <a  ng-click='selectHiStreetBrand(Hi_Street_Brand.HiBrand)'> <img ng-src="img/{{Hi_Street_Brand.imageUrl}}" /></a>
+          	<li ng-repeat="Hi_Street_Brand in preferences.hi_street_brands">
+               <input type="text" ng-model="Hi_Street_Brand.hibrand"/>
+                <a  ng-click='selectHiStreetBrand(Hi_Street_Brand.hibrand)'> <img ng-src="img/{{Hi_Street_Brand.imageUrl}}" /></a>
          	</li>
          </ul>
       </li>
       
       <li fs-page class='page-Fast_Fashion_Brands'>
-          Fast_Fashion_Brands I have {{preferences.Fast_Fashion_Brands.length}} Fast_Fashion_Brands
+          Fast_Fashion_Brands I have {{preferences.fast_fashion_brands.length}} fast_fashion_brands
           <ul>
-          	<li ng-repeat="Fast_Fashion_Brand in preferences.Fast_Fashion_Brands">
-               <input type="text" ng-model="Fast_Fashion_Brand.FastFash"/>
-                <a  ng-click='selectFastFashionBrand(Fast_Fashion_Brand.FastFash)'> <img ng-src="img/{{Fast_Fashion_Brand.imageUrl}}" /></a>
+          	<li ng-repeat="Fast_Fashion_Brand in preferences.fast_fashion_brands">
+               <input type="text" ng-model="Fast_Fashion_Brand.fastfash"/>
+                <a  ng-click='selectFastFashionBrand(Fast_Fashion_Brand.fastfash)'> <img ng-src="img/{{Fast_Fashion_Brand.imageUrl}}" /></a>
          	</li>
          </ul>
       </li>
  
       <li fs-page class='page-IndieDesigners'>
-          Fast_Fashion_Brands I have {{preferences.IndieDesigners.length}} Fast_Fashion_Brands
+          indie_designers I have {{preferences.indie_designers.length}} indie_designers
           <ul>
-          	<li ng-repeat="IndieDesigner in preferences.IndieDesigners">
+          	<li ng-repeat="IndieDesigner in preferences.indie_designers">
           	 <div>
                <input type="text" ng-model="IndieDesigner.indie"/>
                 <a  ng-click='selectIndieDesigner(IndieDesigner.indie)'><img ng-src="img/{{IndieDesigner.imageUrl}}" /></a>
