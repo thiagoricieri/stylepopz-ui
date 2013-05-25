@@ -3,6 +3,10 @@
 function ProfileCtrl($scope, $http, Navigation, Preferences) {
   $scope.Navigation = Navigation;
   $scope.prefer = [];
+  $scope.prefer.sizes = [];
+  $scope.prefer.shirts = [];
+  $scope.prefer.pants = [];
+  $scope.prefer.shoes = [];
   $scope.prefer.colors = [];
   $scope.prefer.prints = [];
   $scope.prefer.hiStreetBrand = [];
@@ -22,10 +26,27 @@ function ProfileCtrl($scope, $http, Navigation, Preferences) {
   $scope.selectFemale = function() {
     $scope.profile.gender = "F";
   };
+  
+  
 
   $scope.selectMale = function() {
     $scope.profile.gender = "M";
   };
+  
+  
+  $scope.selectShirts = function(shirt) {
+	  $scope.prefer.shirts.push(shirt);
+  };
+  
+  $scope.selectPants = function(pant) {
+	  $scope.prefer.pants.push(pant);
+  };
+  
+  $scope.selectShoes = function(shoe) {
+	  $scope.prefer.shoes.push(shoe);
+  };
+  
+  
   
   $scope.selectColor = function(color) {
 	  $scope.prefer.colors.push(color);
@@ -72,6 +93,9 @@ function ProfileCtrl($scope, $http, Navigation, Preferences) {
 	  var object = {
 			  id: Preferences.getId(),
 			  Sex: $scope.profile.gender,
+			  shirt: $scope.prefer.shirts,
+			  pants: $scope.prefer.pants,
+			  shoes: $scope.prefer.shoes,
 			  color: $scope.prefer.colors,
 			  prints: $scope.prefer.prints,
 			  luxurybrands: $scope.prefer.luxurybrands,
@@ -87,9 +111,8 @@ function ProfileCtrl($scope, $http, Navigation, Preferences) {
 	  $http({
 	      method: method,
 	      url: url,
-	      params: {'preference':json},
-	      data: {'preference':json},
-	      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+	      data: 'preference='+json,
+	      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
 	    }).
 	    success(function(response) {
 	    	console.log(response);
@@ -121,11 +144,11 @@ function preferencesCtrl($scope, $location, $http) {
 }
 
 function loadPreferences($scope, $http, $location,Preferences){
-	// var _URL_ = 'json/preferences.json';    
-    var _URL_ = "http://localhost:8080/stylepopz/api/user/getPreference/";
+	 var _URL_ = 'json/preferences1.json';    
+    //var _URL_ = "http://localhost:8080/stylepopz/api/user/getPreference/";
      
     //var _URL_ = "http://stylepops.herokuapp.com/api/user/getPreference/100000591379521";  
-  	_URL_ = _URL_+Preferences.getId();
+  	//_URL_ = _URL_+Preferences.getId();
      alert(_URL_);
 
      console.log("Hello from loadPreferences");

@@ -11,67 +11,100 @@
         <div class='male' ng-click='selectMale()' ng-class='{selected:isMale()}'></div>
       </li>
       
+      
+       <li fs-page class='page-size'>
+             Select the sizes from these magnificent size {{preferences.sizes[0].shirts}}
+    
+        <table>
+          <tr>
+          	<td ng-repeat="size in preferences.sizes[0].shirts"> 
+          	      {{size.selected}}
+                 <a><img ng-src="img/sizes/{{size.url}}" ng-click='selectShirts(size.shirt)' ng-class='{{size.selected}}'/></a>
+         	</td>
+          </tr>
+          <tr>
+       		<td ng-repeat="size in preferences.sizes[0].pants"> 
+       	           {{size.pant}}
+          	       <a><img ng-src="img/sizes/{{size.url}}" ng-click='selectPants(size.pant)' ng-class='{{size.selected}}'/></a>
+       		</td>
+       	 </tr>
+       	 <tr>
+       		<td ng-repeat="size in preferences.sizes[0].shoes"> 
+       	          {{size.shoes}}
+          	       <a><img ng-src="img/sizes/{{size.url}}" ng-click='selectShoes(size.shoes)' ng-class='{{size.selected}}'/></a>
+       		</td>
+       	</tr>
+       	</table>
+       	
+      </li>
+      
+      
       <li fs-page class='page-colors'>
-          Select the colors from these {{preferences.colors.length}} colors
-          <ul>
-          	<li ng-repeat="color in preferences.colors">
-               <a  ng-click='selectColor(color.color)'>  <img ng-src="img/{{color.imageUrl}}" /></a>
-         	</li>
-         </ul>
+          Select the color from these {{preferences.colors.length}} colors {{preferences.colors.url}}
+           <table>
+            <tr>
+          	<td ng-repeat="color in preferences.colors">
+               <a  ng-click='selectColor(color.color)' class='color'>  <img ng-src="img/colors/{{color.url}}" /></a>
+         	</td>
+         	</tr>
+         	</table>
       </li>
       
       
        <li fs-page class='page-prints'>
           Select the Prints from these {{preferences.prints.length}} prints
-          <ul>
-          	<li ng-repeat="print in preferences.prints">
-               <input type="text" ng-model="print.print" selected='true'/>
-                <a  ng-click='selectPrints(print.print)'>  <img ng-src="img/{{print.imageUrl}}" /></a>
-         	</li>
-         </ul>
-      </li>
+           <table>
+            <tr>
+          	<td ng-repeat="print in preferences.prints">
+                <a  ng-click='selectPrints(print.print)'>  <img ng-src="img/{{print.url}}" /></a>
+         	</td>
+            </tr>
+         	</table>
+       </li>
       
       
       <li fs-page class='page-luxurybrands'>
           Select the Luxurybrands from these {{preferences.luxurybrands.length}} luxurybrands
-          <ul>
-          	<li ng-repeat="luxurybrand in preferences.luxurybrands">
-               <input type="text" ng-model="luxurybrand.luxbrand"/>
-              <a  ng-click='selectluxurybrands(luxurybrand.luxbrand)'>  <img ng-src="img/{{luxurybrand.imageUrl}}" /></a>
-         	</li>
-         </ul>
+         <table>
+            <tr>
+          	<td ng-repeat="luxurybrand in preferences.luxurybrands">
+                <a  ng-click='selectluxurybrands(luxurybrand.luxbrand)'>  <img ng-src="img/luxury/{{luxurybrand.url}}" /></a>
+         	</td>
+            </tr>
+         	</table>
       </li>
       
       <li fs-page class='page-Hi_Street_Brands'>
           Hi_Street_Brand I have {{preferences.hi_Street_Brands.length}} hi_street_brand
-          <ul>
-          	<li ng-repeat="Hi_Street_Brand in preferences.hi_street_brands">
-               <input type="text" ng-model="Hi_Street_Brand.hibrand"/>
-                <a  ng-click='selectHiStreetBrand(Hi_Street_Brand.hibrand)'> <img ng-src="img/{{Hi_Street_Brand.imageUrl}}" /></a>
-         	</li>
-         </ul>
+         <table>
+            <tr>
+          	<td ng-repeat="Hi_Street_Brand in preferences.hi_street_brands">
+                <a  ng-click='selectHiStreetBrand(Hi_Street_Brand.hibrand)'> <img ng-src="img/luxury/{{Hi_Street_Brand.url}}" /></a>
+         	</td>
+          </tr>
+         	</table>
       </li>
       
       <li fs-page class='page-Fast_Fashion_Brands'>
           Fast_Fashion_Brands I have {{preferences.fast_fashion_brands.length}} fast_fashion_brands
-          <ul>
-          	<li ng-repeat="Fast_Fashion_Brand in preferences.fast_fashion_brands">
-               <input type="text" ng-model="Fast_Fashion_Brand.fastfash"/>
-                <a  ng-click='selectFastFashionBrand(Fast_Fashion_Brand.fastfash)'> <img ng-src="img/{{Fast_Fashion_Brand.imageUrl}}" /></a>
-         	</li>
-         </ul>
+          <table>
+            <tr>
+          	<td ng-repeat="Fast_Fashion_Brand in preferences.fast_fashion_brands">
+                <a  ng-click='selectFastFashionBrand(Fast_Fashion_Brand.fastfash)'> <img ng-src="img/luxury/{{Fast_Fashion_Brand.url}}" /></a>
+         	</td>
+          </tr>
+         	</table>
       </li>
  
       <li fs-page class='page-IndieDesigners'>
           indie_designers I have {{preferences.indie_designers.length}} indie_designers
-          <ul>
-          	<li ng-repeat="IndieDesigner in preferences.indie_designers">
-          	 <div>
-               <input type="text" ng-model="IndieDesigner.indie"/>
-                <a  ng-click='selectIndieDesigner(IndieDesigner.indie)'><img ng-src="img/{{IndieDesigner.imageUrl}}" /></a>
-              </div>
-         	</li>
-         </ul>
+          <table>
+            <tr>
+          	<td ng-repeat="IndieDesigner in preferences.indie_designers">
+          	    <a  ng-click='selectIndieDesigner(IndieDesigner.indie)'><img ng-src="img/luxury/{{IndieDesigner.url}}" /></a>
+              </td>
+             </tr>
+         	</table>
       </li>
       
 

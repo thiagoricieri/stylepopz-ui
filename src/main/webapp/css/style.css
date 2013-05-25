@@ -57,7 +57,9 @@ li.page-gender .female, li.page-gender .male {
   -webkit-transition: opacity 0.9s, zoom 0.9s;
   -webkit-transition-timing-function: ease; }
   li.page-gender .female.selected, li.page-gender .male.selected {
-    opacity: 1; }
+    opacity: 1;
+    zoom: 1.7;
+     }
 li.page-gender .female {
   background: url("../img/female.png") no-repeat 50% 50%;
   zoom: 0.595; }
@@ -67,7 +69,33 @@ li.page-gender .male {
   background: url("../img/male.png") no-repeat 50% 50%; }
   li.page-gender .male.selected {
     zoom: 1; }
+    
+li.page-colors  .color {
+	zoom: 1;
+	border: 1; 
+	opacity: 1; 
+   	height: 50%;
+  	width: 50%;
+}
 
+
+.sizes {
+	background-color: red;
+	height: 10%;
+  	width: 10%;
+}
+
+li.page-size .Y {
+	background-color: red;
+	height: 10%;
+  	width: 10%;
+}
+
+.N {
+	background-color: orange;
+	height: 10%;
+  	width: 10%;
+}
 .error {
 	color: red;
 }
