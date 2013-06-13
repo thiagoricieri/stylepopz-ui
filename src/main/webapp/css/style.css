@@ -85,16 +85,17 @@ li.page-colors  .color {
   	width: 10%;
 }
 
-li.page-size .Y {
+.Y {
 	background-color: red;
-	height: 10%;
-  	width: 10%;
+	opacity: 1;
+    zoom: 1.7;
+	
 }
 
 .N {
-	background-color: orange;
-	height: 10%;
-  	width: 10%;
+	background-color: blue;
+	opacity: 1;
+    zoom: 1;
 }
 .error {
 	color: red;

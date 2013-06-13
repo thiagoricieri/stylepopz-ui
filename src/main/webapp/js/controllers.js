@@ -36,6 +36,8 @@ function ProfileCtrl($scope, $http, Navigation, Preferences) {
   
   $scope.selectShirts = function(shirt) {
 	  $scope.prefer.shirts.push(shirt);
+	  console.log("Shirts: ");
+	  console.log($scope.profile);
   };
   
   $scope.selectPants = function(pant) {
@@ -87,21 +89,22 @@ function ProfileCtrl($scope, $http, Navigation, Preferences) {
   
   $scope.saveProfile = function(){
 	  var method = 'POST';
-	  var url = 'http://localhost:8080/stylepopz/api/user/setPreference';
+	  var url = 'http://localhost:8080/stylepops/api/user/setPreference';
 	  $scope.codeStatus = "";
 	  
 	  var object = {
-			  id: Preferences.getId(),
-			  Sex: $scope.profile.gender,
-			  shirt: $scope.prefer.shirts,
+			 // id: Preferences.getId(),
+			  id: "100000591379521",
+			  sex: $scope.profile.gender,
+			  shirts: $scope.prefer.shirts,
 			  pants: $scope.prefer.pants,
 			  shoes: $scope.prefer.shoes,
-			  color: $scope.prefer.colors,
+			  colors: $scope.prefer.colors,
 			  prints: $scope.prefer.prints,
-			  luxurybrands: $scope.prefer.luxurybrands,
-			  hiStreetBrand: $scope.prefer.hiStreetBrand,
-			  fastFashionBrand: $scope.prefer.fastFashionBrand,
-			  indieDesigner:  $scope.prefer.indieDesigner
+			  luxuryBrands: $scope.prefer.luxurybrands,
+			  hiStreetBrands: $scope.prefer.hiStreetBrand,
+			  fastFashionBrands: $scope.prefer.fastFashionBrand,
+			  indieDesigners:  $scope.prefer.indieDesigner
       };
 		
 	  
@@ -144,10 +147,11 @@ function preferencesCtrl($scope, $location, $http) {
 }
 
 function loadPreferences($scope, $http, $location,Preferences){
-	 var _URL_ = 'json/preferences1.json';    
-    //var _URL_ = "http://localhost:8080/stylepopz/api/user/getPreference/";
+	// var _URL_ = 'json/preferences.json';    
+   var _URL_ = "http://localhost:8080/stylepops/api/user/getPreference/100000591379521";
      
-    //var _URL_ = "http://stylepops.herokuapp.com/api/user/getPreference/100000591379521";  
+   // var _URL_ = "http://stylepops.herokuapp.com/api/user/getPreference/100000591379521";  
+   // var _URL_  = "http://stylepops.herokuapp.com/api/user/getProfile/100000591379521"
   	//_URL_ = _URL_+Preferences.getId();
      alert(_URL_);
 
@@ -164,8 +168,8 @@ function loadPreferences($scope, $http, $location,Preferences){
 	 }).
      error(function(data, status) {
     	console.log(status);
-    	console.log(data);
-    	$scope.preferences = data
+    	console.log(data.prefJson);
+    	$scope.preferences = data.prefJson
     	alert('failed '+data);
     });
 	
@@ -204,7 +208,7 @@ function LoginCtrl($scope, $location, $http, $rootScope,Preferences) {
 		    $scope.data = data || "Request failed";
 		    $scope.status = status;
 		    loadPreferences($scope,$http,$location,Preferences);
-		    //$location.path('displayproducts');
+		   // $location.path('displayproducts');
 	    });
    }
 }

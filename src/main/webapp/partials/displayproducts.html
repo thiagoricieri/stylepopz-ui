@@ -11,12 +11,12 @@
       </select>
 
     </div>
-    <div class="span10" >
+    <div class="span20" >
  
       <ul class="phones">
          
          <li ng-repeat="user in users | filter:query | orderBy:orderProp" class="thumbnail">
-         <div class="span100" >
+         <div>
           <a href="#/displayproducts/{{user.blog}}/{{user.rank}}" class="thumb"><img ng-src="{{user.imageUrl}}"></a>
           <a href="#/displayproducts/{{user.blog}}/{{user.rank}}">{{user.name}}</a>
           <p>{{user.snippet}}</p>

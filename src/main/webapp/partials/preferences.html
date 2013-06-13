@@ -13,25 +13,25 @@
       
       
        <li fs-page class='page-size'>
-             Select the sizes from these magnificent size {{preferences.sizes[0].shirts}}
+             Select the sizes from these magnificent sizes {{preferences.sizes}}
     
         <table>
           <tr>
-          	<td ng-repeat="size in preferences.sizes[0].shirts"> 
+          	<td ng-repeat="size in preferences.sizes.shirts"> 
           	      {{size.selected}}
-                 <a><img ng-src="img/sizes/{{size.url}}" ng-click='selectShirts(size.shirt)' ng-class='{{size.selected}}'/></a>
+                 <a><img ng-src="img/sizes/{{size.url}}" ng-click='selectShirts(size.shirt)'  class="{{size.selected}}"/></a>
          	</td>
           </tr>
           <tr>
-       		<td ng-repeat="size in preferences.sizes[0].pants"> 
+       		<td ng-repeat="size in preferences.sizes.pants"> 
        	           {{size.pant}}
-          	       <a><img ng-src="img/sizes/{{size.url}}" ng-click='selectPants(size.pant)' ng-class='{{size.selected}}'/></a>
+          	       <a><img ng-src="img/sizes/{{size.url}}" ng-click='selectPants(size.pant)' class="{{size.selected}}"/></a>
        		</td>
        	 </tr>
        	 <tr>
-       		<td ng-repeat="size in preferences.sizes[0].shoes"> 
+       		<td ng-repeat="size in preferences.sizes.shoes"> 
        	          {{size.shoes}}
-          	       <a><img ng-src="img/sizes/{{size.url}}" ng-click='selectShoes(size.shoes)' ng-class='{{size.selected}}'/></a>
+          	       <a><img ng-src="img/sizes/{{size.url}}" ng-click='selectShoes(size.shoes)' class="{{size.selected}}"/></a>
        		</td>
        	</tr>
        	</table>
@@ -64,10 +64,10 @@
       
       
       <li fs-page class='page-luxurybrands'>
-          Select the Luxurybrands from these {{preferences.luxurybrands.length}} luxurybrands
+          Select the Luxurybrands from these {{preferences.luxuryBrands.length}} luxurybrands
          <table>
             <tr>
-          	<td ng-repeat="luxurybrand in preferences.luxurybrands">
+          	<td ng-repeat="luxurybrand in preferences.luxuryBrands">
                 <a  ng-click='selectluxurybrands(luxurybrand.luxbrand)'>  <img ng-src="img/luxury/{{luxurybrand.url}}" /></a>
          	</td>
             </tr>
@@ -75,10 +75,10 @@
       </li>
       
       <li fs-page class='page-Hi_Street_Brands'>
-          Hi_Street_Brand I have {{preferences.hi_Street_Brands.length}} hi_street_brand
+          Hi_Street_Brand I have {{preferences.hiStreetBrands.length}} hiStreetBrands
          <table>
             <tr>
-          	<td ng-repeat="Hi_Street_Brand in preferences.hi_street_brands">
+          	<td ng-repeat="Hi_Street_Brand in preferences.hiStreetBrands">
                 <a  ng-click='selectHiStreetBrand(Hi_Street_Brand.hibrand)'> <img ng-src="img/luxury/{{Hi_Street_Brand.url}}" /></a>
          	</td>
           </tr>
@@ -86,10 +86,10 @@
       </li>
       
       <li fs-page class='page-Fast_Fashion_Brands'>
-          Fast_Fashion_Brands I have {{preferences.fast_fashion_brands.length}} fast_fashion_brands
+          Fast_Fashion_Brands I have {{preferences.fastFashionBrands.length}} fast_fashion_brands
           <table>
             <tr>
-          	<td ng-repeat="Fast_Fashion_Brand in preferences.fast_fashion_brands">
+          	<td ng-repeat="Fast_Fashion_Brand in preferences.fastFashionBrands">
                 <a  ng-click='selectFastFashionBrand(Fast_Fashion_Brand.fastfash)'> <img ng-src="img/luxury/{{Fast_Fashion_Brand.url}}" /></a>
          	</td>
           </tr>
@@ -97,10 +97,10 @@
       </li>
  
       <li fs-page class='page-IndieDesigners'>
-          indie_designers I have {{preferences.indie_designers.length}} indie_designers
+          indie_designers I have {{preferences.indieDesigners.length}} indie_designers
           <table>
             <tr>
-          	<td ng-repeat="IndieDesigner in preferences.indie_designers">
+          	<td ng-repeat="IndieDesigner in preferences.indieDesigners">
           	    <a  ng-click='selectIndieDesigner(IndieDesigner.indie)'><img ng-src="img/luxury/{{IndieDesigner.url}}" /></a>
               </td>
              </tr>
